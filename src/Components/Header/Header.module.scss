@@ -1,0 +1,41 @@
+@import "../../varibles.module";
+
+.Header{
+  z-index: 1000;
+  font-size: 24px;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  background-color: $colorWhite;
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+  &__Img{
+    margin-top: auto ;
+    margin-bottom: auto;
+    img{
+      margin: auto;
+      padding-top: 10px;
+    }
+  }
+  &__UL{
+    text-align: center;
+    justify-content: center;
+    margin: auto 0 auto 0;
+
+    ul{
+
+      display: flex;
+      justify-content: space-around;
+
+      li{
+        list-style-type: none;
+        cursor: pointer;
+      }
+
+    }
+    &__Act{
+      color: $colorGreenAct;
+      border-bottom: 1px solid $colorGreenAct;
+    }
+  }
+}

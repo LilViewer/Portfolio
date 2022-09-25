@@ -1,0 +1,481 @@
+@import "../../varibles.module";
+
+.test1{
+  div:nth-child(4){
+    animation: borderColor 2s linear forwards;
+  }
+  div:nth-child(1){
+    animation: outC1E1 6s linear infinite,borderColor 2s linear forwards;
+  }
+  div:nth-child(2){
+    animation: outC1E2 7s linear infinite,borderColor 2s linear forwards;
+  }
+  div:nth-child(3){
+    animation: outC1E3 12s linear infinite,borderColor 2s linear forwards;
+  }
+  svg{
+    polygon{
+      animation: polygonColor 2s linear forwards;
+    }
+  }
+}
+.test2{
+  div:nth-child(4){
+    animation: borderColor 2s linear forwards;
+  }
+  div:nth-child(1){
+    animation: outC2E1 8s linear infinite,borderColor 2s linear forwards;
+  }
+  div:nth-child(2){
+    animation: outC2E2 16s linear infinite,borderColor 2s linear forwards;
+  }
+  div:nth-child(3){
+    animation: outC2E3 2s linear infinite,borderColor 2s linear forwards;
+  }
+  svg{
+    polygon{
+      animation: polygonColor 2s linear forwards;
+    }
+  }
+}
+.test3{
+  div:nth-child(4){
+    animation: borderColor 2s linear forwards;
+  }
+  div:nth-child(1){
+    animation: outC3E1 8s linear infinite,borderColor 2s linear forwards;
+  }
+  div:nth-child(2){
+    animation: outC3E2 16s linear infinite,borderColor 2s linear forwards;
+  }
+  div:nth-child(3){
+    animation: outC3E3 12s linear infinite,borderColor 2s linear forwards;
+  }
+  svg{
+    polygon{
+      animation: polygonColor 2s linear forwards;
+    }
+  }
+}
+@keyframes borderColor {
+  100%{
+    border-color: $colorRed;
+  }
+}
+@keyframes polygonColor {
+  100%{
+    fill: $colorRed;
+    stroke: $colorRed;
+    stroke-width: 1px;
+    fill-rule: nonzero;
+  }
+}
+.Prod{
+  background-color: $colorBlack;
+  height: 100vh;
+  width: 100%;
+  font-size: 2.5vw;
+  padding: 0 0 0 40px;
+  color: $colorWhite;
+  display: grid;
+  grid-template-columns: 4fr 6fr;
+  grid-gap: 80px;
+  overflow: hidden;
+  position: relative;
+
+
+  &__right{
+    position: relative;
+    overflow: hidden;
+    &__block__circle1,&__block__circle2,&__block__circle3{
+      min-width: 130px;
+      min-height: 130px;
+    }
+    &__block,&__block__circle1,&__block__circle2,&__block__circle3{
+      position: absolute;
+      bottom: -20%;
+      right: -20%;
+      height: 100vh;
+      width:55vw;
+    }
+    &__block{
+      position: relative;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      border-radius: 50%;
+      border: 8px solid $colorWhite;
+      &__circle1{
+        top: -6%;
+        left: 20%;
+        //border-color: #2EFD73;
+        &__rel{
+          &__out1{
+            animation: outC1E1 6s linear infinite;
+          }
+          &__out2{
+            animation: outC1E2 7s linear infinite;
+          }
+          &__out3{
+            animation: outC1E3 12s linear infinite;
+          }
+        }
+        @keyframes outC1E1 {
+          100%{
+            transform: rotate(360deg);
+          }
+        }
+        @keyframes outC1E2 {
+          100%{
+            transform: rotate(-360deg);
+          }
+        }
+        @keyframes outC1E3 {
+          100%{
+            transform: rotate(-720deg);
+          }
+        }
+      }
+      &__circle2{
+        top: 10%;
+        left: -1%;
+        &__rel{
+          &__out1{
+            animation: outC2E1 8s linear infinite;
+          }
+          &__out2{
+            animation: outC2E2 16s linear infinite;
+          }
+          &__out3{
+            animation: outC2E3 2s linear infinite;
+          }
+        }
+        @keyframes outC2E1 {
+          100%{
+            transform: rotate(360deg);
+          }
+        }
+        @keyframes outC2E2 {
+          100%{
+            transform: rotate(-360deg);
+          }
+        }
+        @keyframes outC2E3 {
+          100%{
+            transform: rotate(360deg);
+          }
+        }
+      }
+      &__circle3{
+        top: 40%;
+        left: -10%;
+        &__rel{
+          &__out1{
+            animation: outC3E1 8s linear infinite;
+          }
+          &__out2{
+            animation: outC3E2 16s linear infinite;
+          }
+          &__out3{
+            animation: outC3E3 12s linear infinite;
+          }
+        }
+        @keyframes outC3E1 {
+          100%{
+            transform: rotate(360deg);
+          }
+        }
+        @keyframes outC3E2 {
+          100%{
+            transform: rotate(-360deg);
+          }
+        }
+        @keyframes outC3E3 {
+          100%{
+            transform: rotate(720deg);
+          }
+        }
+      }
+      &__circle1,&__circle2,&__circle3{
+        position: absolute;
+        //left: 10%;
+        width: 20%;
+        height: 20%;
+        cursor: pointer;
+
+        &__rel{
+          position: relative;
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          &__out{
+            height: 100%;
+            width: 100%;
+            position: relative;
+            border: 3px solid $colorWhite;
+            border-radius: 50%;
+            background-color: rgba($colorBlack,.4);
+          }
+          &__out1,&__out2,&__out3{
+            position: absolute;
+          }
+          &__out1{
+            border-left: none;
+            border-top: none;
+            border-right: none;
+          }
+          &__out2{
+            border-left: none;
+            border-bottom: none;
+            border-right: none;
+          }
+          &__out3{
+            border-bottom: none;
+            border-top: none;
+            border-right: none;
+          }
+
+          &__inside{
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 50%;
+            width: 70%;
+            height: 70%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            border: 4px solid $colorWhite;
+
+            svg{
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              display: block;
+              polygon{
+                fill: $colorWhite;
+                stroke: $colorWhite;
+                stroke-width: 1px;
+                fill-rule: nonzero;
+              }
+            }
+            svg:nth-child(2){
+              animation: svg1 5s linear infinite;
+            }
+            svg:nth-child(2n+1){
+              transform: rotate(120deg);
+              animation: svg2 5s linear infinite;
+            }
+            svg:nth-child(2n+3){
+              transform: rotate(240deg);
+              animation: svg3 5s linear infinite;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__left{
+    display: inline-block;
+
+    margin: 40px 0;
+
+    &__title{
+
+      &__top{
+        b{
+          position: absolute;
+        }
+        svg{
+          padding-top: 5px;
+          width: 100%;
+          height: 50px;
+          position: relative;
+          display: block;
+          polygon{
+            fill: $colorWhite;
+            stroke: $colorWhite;
+            stroke-width: 1px;
+            fill-rule: nonzero;
+          }
+        }
+
+
+      }
+      &__bot{
+        color: $colorGreen;
+        font-weight: bold;
+        text-shadow: 0px 0px 6px $colorGreen;
+      }
+    }
+
+    &__info{
+      top: 10vh;
+      left: -20px;
+      position: relative;
+      &__block{
+        display: grid;
+        grid-template-columns: 1fr 25fr;
+        min-height: 50vh;
+        &__right{
+          padding: 10px;
+          background-color: rgba($colorGrey,.2);
+          &__moreinfo{
+            margin: 20px 0;
+
+            &__tags{
+              color: $colorGrey;
+              font-size: 16px;
+              display: flex;
+              overflow: hidden;
+              &__tag:nth-child(1){
+                margin-left: 0;
+              }
+              &__tag{
+                max-height: 40px;
+                margin: 0 10px;
+                text-align: center;
+                min-width: 60px;
+                padding: 5px;
+                border-radius: 15%;
+                background-color: rgba($colorGrey,.2);
+
+              }
+            }
+          }
+          &__href{
+            position: absolute;
+            height: 70px;
+            left: 18px;
+            bottom: 0;
+            img:nth-child(even){
+              left: 100px;
+            }
+          }
+          &__title{
+            p{
+              font-weight: bold;
+              b{
+                color: $colorGreen;
+                text-shadow: 0 0 6px $colorGreen;
+              }
+            }
+          }
+        }
+        &__left{
+          width: 20px;
+          position: relative;
+            svg{
+              display: block;
+              height: 100%;
+              width: 100%;
+              polygon{
+                fill: $colorWhite;
+                stroke: $colorWhite;
+                stroke-width: 1px;
+                fill-rule: nonzero;
+              }
+            }
+        }
+      }
+      &__circle{
+        position: absolute;
+        left:-10px;
+        top: -30px;
+        width: 60px;
+        height: 60px;
+        &__out{
+          position: absolute;
+          border: 1px solid $colorWhite;
+          border-radius: 50%;
+          width: 60px;
+          height: 60px;
+        }
+        &__out1{
+          border-right: none;
+          border-bottom: none;
+          border-top: none;
+          animation: out1 8s linear infinite;
+        }
+        &__out2{
+          border-left: none;
+          border-bottom: none;
+          border-top: none;
+          animation: out2 6s linear infinite;
+        }
+        &__out3{
+          border-right: none;
+          border-bottom: none;
+          animation: out3 12s linear infinite;
+        }
+        @keyframes out1 {
+          100%{
+            transform: rotate(360deg);
+          }
+        }
+        @keyframes out2 {
+          100%{
+            transform: rotate(-360deg);
+          }
+        }
+        @keyframes out3 {
+          100%{
+            transform: rotate(360deg);
+          }
+        }
+        &__inside{
+          position: absolute;
+          border: 3px solid $colorWhite;
+          width: 43px;
+          height: 43px;
+          border-radius: 50%;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          margin: auto;
+
+          svg{
+            position: absolute;
+            width: 100%;
+            height: 40px;
+            polygon{
+              fill: $colorWhite;
+              stroke: $colorWhite;
+              stroke-width: 1px;
+              fill-rule: nonzero;
+            }
+          }
+          svg:nth-child(2){
+            animation: svg1 5s linear infinite;
+          }
+          svg:nth-child(2n+1){
+            transform: rotate(120deg);
+            animation: svg2 5s linear infinite;
+          }
+          svg:nth-child(2n+3){
+            transform: rotate(240deg);
+            animation: svg3 5s linear infinite;
+          }
+          @keyframes svg1 {
+            100%{
+              transform: rotate(-360deg);
+            }
+          }
+          @keyframes svg2 {
+            100%{
+              transform: rotate(-240deg);
+            }
+          }
+          @keyframes svg3 {
+            100%{
+              transform: rotate(-120deg);
+            }
+          }
+        }
+      }
+    }
+  }
+}

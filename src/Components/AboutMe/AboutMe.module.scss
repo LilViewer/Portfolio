@@ -1,0 +1,110 @@
+@import "../../varibles.module";
+
+.AboutMe{
+  color: $colorWhite;
+  width: 100%;
+  height: 100vh;
+  background-color: $colorBlack;
+  display: inline-block;
+  padding: 0px 12vw 0px 12vw;
+  font-size: 2.7vw;
+  position: relative;
+  overflow: hidden;
+  &__hr{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    hr{
+      border: 1px solid rgba($colorWhite,.5);
+      width: 150vw;
+      position: absolute;
+    }
+    &__hr1,&__hr2,&__hr3,&__hr4{
+      transform: rotate(90deg);
+    }
+    &__hr3,&__hr4{
+    }
+    &__hr1{
+      left: -68vw;
+    }
+    &__hr2{
+      left: -45vw;
+    }
+    &__hr3{
+      left: -12vw;
+    }
+    &__hr4{
+      left: 18vw;
+    }
+    &__hr5{
+      top: 70vh;
+    }
+    &__hr6{
+      top: 50vh;
+    }
+    &__hr7{
+      top: 20vh;
+    }
+    &__hr8{
+      top: 80vh;
+    }
+  }
+  &__top{
+    position: relative;
+    display: grid;
+    grid-template-columns: 4fr 10fr;
+    grid-gap: 5vw;
+    margin: 3vh 0;
+    &__img{
+      padding-top: 60px;
+      img{
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        object-fit: contain;
+        height: 100%;
+      }
+    }
+    &__me{
+      //width: 80%;
+      //position: absolute;
+      position: relative;
+      div{
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        b{
+          font-size: 36px;
+        }
+        p{
+          background: rgba(0, 0, 0, 0.5);
+          border-left: 3px solid $colorGreen;
+          margin: 10px 0;
+          padding-left: 6px;
+        }
+      }
+    }
+  }
+
+  &__bot{
+    b{
+      font-size: 36px;
+    }
+    &__num{
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      p{
+
+        b{
+          color: $colorGreen;
+          text-shadow: 0px 0px 6px $colorGreen;
+          font-size: 36px;
+        }
+      }
+    }
+  }
+}

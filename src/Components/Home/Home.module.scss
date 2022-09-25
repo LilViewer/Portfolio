@@ -1,0 +1,30 @@
+@import "../../varibles.module";
+.Home{
+  //overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  background-image: url("../../Images/Global/Rectangle 1.png");
+  &__text{
+    position: absolute;
+    left: 4vw;
+    top: 0;
+    bottom: 0;
+    height: 320px;
+    font-size: 36px;
+    color: $colorWhite;
+    margin:  auto ;
+    &__top,&__bot{
+      padding: 40px;
+    }
+    &__top p
+    {
+      font-size: 26px;
+      color: $colorGrey;
+    }
+    &__bot p:nth-child(even)
+    {
+      padding-top: 10px;
+      font-size: 32px;
+    }
+  }
+}
