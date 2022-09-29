@@ -1,9 +1,9 @@
 import React from "react";
 import cn from 'classnames';
-import figma from "../../../Images/Global/figma.png";
-import github from "../../../Images/Global/github.png";
+import Figma from "../../../Images/Global/figma.png";
+import Github from "../../../Images/Global/github.png";
 import classes from '../Prodjects.module.scss'
-const Points = ({number,name, tag,info}) =>{
+const Points = ({number,name, tag,info, git, figma}) =>{
     return(
         <div className={classes.Prod__left__info__block__right}>
             <div className={classes.Prod__left__info__block__right__title}>
@@ -26,12 +26,16 @@ const Points = ({number,name, tag,info}) =>{
                 }
             </div>
             <div className={classes.Prod__left__info__block__right__href}>
-                <img
-                    src={figma}
-                />
-                <img
-                    src={github}
-                />
+                <a
+                    href={figma}
+                >
+                    <img src={Figma} />
+                </a>
+                <a
+                    href={git}
+                >
+                    <img src={Github}/>
+                </a>
             </div>
         </div>
     )

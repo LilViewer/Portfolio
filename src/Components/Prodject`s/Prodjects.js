@@ -30,19 +30,25 @@ const Prodjects = () =>{
                 num: 1,
                 name:'ViewerShop',
                 tegs: ['React','Laravel','Api','JS'],
-                info: 'Интернет-магазин игровых ключей. Выполненый в Front на React, Beck на Laravel с использованием Api'
+                info: 'Интернет-магазин игровых ключей. Выполненый в Front на React, Beck на Laravel с использованием Api',
+               git: 'https://github.com/LilViewer/Front-ViewerShop',
+               figma: 'https://www.figma.com/file/NduayikJy2hQB1FEYkfkS6/%D0%94%D0%B8%D0%BF%D0%BB%D0%BE%D0%BC%D0%BD%D0%B0%D1%8F'
             },
             PartOne:{
                 num: 2,
                 name:'PortfolioOne',
                 tegs: ['React','JS'],
-                info: 'Сайт портфолио. Одностраничнный лендинг '
+                info: 'Сайт портфолио. Одностраничнный лендинг ',
+                git: 'https://github.com/LilViewer/Site-card',
+                figma: 'https://www.figma.com/file/fv9HGssE1LqK99blNr0rEb/%D0%A1%D0%B0%D0%B9%D1%82-%D0%B2%D0%B8%D0%B7%D0%B8%D1%82%D0%BA%D0%B0'
             },
             PartTwo:{
                 num: 3,
                 name:'PortfolioTwo',
                 tegs: ['React'],
-                info: 'Сайт портфолио'
+                info: 'Сайт портфолио',
+                git: 'https://github.com/LilViewer/Portfolio',
+                figma: 'https://www.figma.com/file/Y3SFMspu2lLKVsXVSqstf5/%D0%9F%D1%80%D1%82%D1%84%D0%BE%D0%BB%D0%B8%D0%BE?node-id=0%3A1',
             }
         }]
     return(
@@ -82,6 +88,8 @@ const Prodjects = () =>{
                                                 info={e.VS.info}
                                                 number={e.VS.num}
                                                 tag={e.VS.tegs}
+                                                figma={e.VS.figma}
+                                                git={e.VS.git}
                                             />
                                     )
                                 })
@@ -94,6 +102,8 @@ const Prodjects = () =>{
                                                 info={e.PartOne.info}
                                                 number={e.PartOne.num}
                                                 tag={e.PartOne.tegs}
+                                                figma={e.PartOne.figma}
+                                                git={e.PartOne.git}
                                             />
                                     )
                                 })
@@ -105,6 +115,8 @@ const Prodjects = () =>{
                                             info={e.PartTwo.info}
                                             number={e.PartTwo.num}
                                             tag={e.PartTwo.tegs}
+                                            figma={e.PartTwo.figma}
+                                            git={e.PartTwo.git}
                                         />
                                 )
                             })
